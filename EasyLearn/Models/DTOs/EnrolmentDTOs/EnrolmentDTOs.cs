@@ -6,6 +6,7 @@ namespace EasyLearn.Models.DTOs.EnrolmentDTOs
     {
         public string Id { get; set; }
         public CompletionStatus CompletionStatus { get; set; }
+        public int NumberOfEnrollments { get; set; }
         public string Grade { get; set; }
         public string CertificateNumber { get; set; }
         public DateTime AccessExpiration { get; set; }
@@ -55,16 +56,16 @@ namespace EasyLearn.Models.DTOs.EnrolmentDTOs
         //public string UserFeedBack { get; set; }
     }
 
-    public class EnrolmentResponseModel : BaseResponse
-    {
-        public EnrolmentDTO Data { get; set; }
-    }
+    //public class EnrolmentResponseModel : BaseResponse
+    //{
+    //    public EnrolmentDTO Data { get; set; }
+    //}
 
-    public class EnrolmentsResponseModel : BaseResponse
-    {
-        public int NumberOfEnrollments { get; set; }
-        public IEnumerable<EnrolmentDTO> Data { get; set; }
+    //public class EnrolmentsResponseModel : BaseResponse
+    //{
+    //    public int NumberOfEnrollments { get; set; }
+    //    public IEnumerable<EnrolmentDTO> Data { get; set; }
 
-    }
+    //}
 
 }

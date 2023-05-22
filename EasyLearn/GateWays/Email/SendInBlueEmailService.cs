@@ -1,6 +1,7 @@
 ﻿using EasyLearn.Data;
 using EasyLearn.Models.DTOs;
 using EasyLearn.Models.DTOs.EmailSenderDTOs;
+using EasyLearn.Models.DTOs.UserDTOs;
 using Microsoft.Extensions.Options;
 using sib_api_v3_sdk.Api;
 using sib_api_v3_sdk.Client;
@@ -19,7 +20,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         _sendinblueOptions = sendinblueOptions.Value;
     }
 
-    public async Task<BaseResponse> CourseCompletionEmailTemplate(EmailSenderDetails model, string baseUrl)
+    public async Task<BaseResponse<UserDTO>> CourseCompletionEmailTemplate(EmailSenderDetails model, string baseUrl)
     {
 
         var key = _sendinblueOptions.APIKey;
@@ -58,7 +59,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         {
             var result = await apiInstance.SendTransacEmailAsync(sendSmtpEmail);
 
-            return new BaseResponse
+            return new BaseResponse<UserDTO>
             {
                 Success = true,
                 Message = "Email successfully sent..",
@@ -67,7 +68,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         catch (Exception)
         {
 
-            return new BaseResponse
+            return new BaseResponse<UserDTO>
             {
                 Success = false,
                 Message = "Email not sent..",
@@ -75,7 +76,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         }
 
     }
-    public async Task<BaseResponse> CourseVerificationTemplate(EmailSenderDetails model, string baseUrl)
+    public async Task<BaseResponse<UserDTO>> CourseVerificationTemplate(EmailSenderDetails model, string baseUrl)
     {
         //var ddd = ;
         var key = _sendinblueOptions.APIKey;
@@ -114,7 +115,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         {
             var result = await apiInstance.SendTransacEmailAsync(sendSmtpEmail);
 
-            return new BaseResponse
+            return new BaseResponse<UserDTO>
             {
                 Success = true,
                 Message = "Email successfully sent..",
@@ -123,14 +124,14 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         catch (Exception)
         {
 
-            return new BaseResponse
+            return new BaseResponse<UserDTO>
             {
                 Success = false,
                 Message = "Email not sent..",
             };
         }
     }
-    public async Task<BaseResponse> EmailVerificationTemplate(EmailSenderDetails model, string baseUrl)
+    public async Task<BaseResponse<UserDTO>> EmailVerificationTemplate(EmailSenderDetails model, string baseUrl)
     {
         //var ddd = ;
         var key = _sendinblueOptions.APIKey;
@@ -169,7 +170,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         {
             var result = await apiInstance.SendTransacEmailAsync(sendSmtpEmail);
 
-            return new BaseResponse
+            return new BaseResponse<UserDTO>
             {
                 Success = true,
                 Message = "Email successfully sent..",
@@ -178,7 +179,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         catch (Exception)
         {
 
-            return new BaseResponse
+            return new BaseResponse<UserDTO>
             {
                 Success = false,
                 Message = "Email not sent..",
@@ -186,7 +187,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         }
     }
 
-    public async Task<BaseResponse> EnrollmentEmailTemplate(EmailSenderDetails model, string baseUrl)
+    public async Task<BaseResponse<UserDTO>> EnrollmentEmailTemplate(EmailSenderDetails model, string baseUrl)
     {
         //var ddd = ;
         var key = _sendinblueOptions.APIKey;
@@ -225,7 +226,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         {
             var result = await apiInstance.SendTransacEmailAsync(sendSmtpEmail);
 
-            return new BaseResponse
+            return new BaseResponse<UserDTO>
             {
                 Success = true,
                 Message = "Email successfully sent..",
@@ -234,7 +235,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         catch (Exception)
         {
 
-            return new BaseResponse
+            return new BaseResponse<UserDTO>
             {
                 Success = false,
                 Message = "Email not sent..",
@@ -243,7 +244,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
 
     }
 
-    public async Task<BaseResponse> SendEmailWithoutAttachment(EmailSenderNoAttachmentDTO model)
+    public async Task<BaseResponse<UserDTO>> SendEmailWithoutAttachment(EmailSenderNoAttachmentDTO model)
     {
         var key = _sendinblueOptions.APIKey;
         var senderName = _sendinblueOptions.SenderName;
@@ -292,7 +293,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
             //var result1 = apiInstance.SendTransacEmail(sendSmtpEmail);
             var result = await apiInstance.SendTransacEmailAsync(sendSmtpEmail);
 
-            return new BaseResponse
+            return new BaseResponse<UserDTO>
             {
                 Success = true,
                 Message = "Email successfully sent..",
@@ -301,7 +302,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         catch (Exception)
         {
 
-            return new BaseResponse
+            return new BaseResponse<UserDTO>
             {
                 Success = true,
                 Message = "Email not sent..",
@@ -309,7 +310,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         }
     }
 
-    public async Task<BaseResponse> WithdrawalConfirmationEmailTemplate(EmailSenderDetails model, string baseUrl)
+    public async Task<BaseResponse<UserDTO>> WithdrawalConfirmationEmailTemplate(EmailSenderDetails model, string baseUrl)
     {
         //var ddd = ;
         var key = _sendinblueOptions.APIKey;
@@ -348,7 +349,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         {
             var result = await apiInstance.SendTransacEmailAsync(sendSmtpEmail);
 
-            return new BaseResponse
+            return new BaseResponse<UserDTO>
             {
                 Success = true,
                 Message = "Email successfully sent..",
@@ -357,7 +358,7 @@ public class SendInBlueEmailService : ISendInBlueEmailService
         catch (Exception)
         {
 
-            return new BaseResponse
+            return new BaseResponse<UserDTO>
             {
                 Success = false,
                 Message = "Email not sent..",

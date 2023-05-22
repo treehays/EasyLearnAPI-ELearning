@@ -10,7 +10,7 @@ public class EmailSenderDTO
     public string FIleName { get; set; }
 }
 
-public class EmailSenderAttachmentDTO : BaseResponse
+public class EmailSenderAttachmentDTO
 {
     public string ReceiverName { get; set; }
     public string ReceiverEmail { get; set; }
@@ -31,7 +31,7 @@ public class EmailSenderDetails
 }
 
 
-public class EmailSenderNoAttachmentDTO : BaseResponse
+public class EmailSenderNoAttachmentDTO
 {
     public string ReceiverName { get; set; }
     public string Body { get; set; }

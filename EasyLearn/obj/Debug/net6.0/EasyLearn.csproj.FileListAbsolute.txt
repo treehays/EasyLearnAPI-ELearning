@@ -130,6 +130,7 @@ C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\EasyLearn.dll
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\EasyLearn.pdb
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\BCrypt.Net-Core.dll
+C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\CsvHelper.dll
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\FubarCoder.RestSharp.Portable.Core.dll
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\FubarCoder.RestSharp.Portable.HttpClient.dll
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\Humanizer.dll
@@ -162,6 +163,8 @@ C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\System.CodeDom.dll
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\Microsoft.WindowsAPICodePack.dll
+C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\Microsoft.WindowsAPICodePack.Shell.dll
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\obj\Debug\net6.0\EasyLearn.csproj.AssemblyReference.cache
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\obj\Debug\net6.0\EasyLearn.GeneratedMSBuildEditorConfig.editorconfig
@@ -184,3 +187,12 @@ C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\obj\Debug\net6.0
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\obj\Debug\net6.0\EasyLearn.pdb
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\obj\Debug\net6.0\EasyLearn.genruntimeconfig.cache
 C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\obj\Debug\net6.0\ref\EasyLearn.dll
+C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\EasyLearn.staticwebassets.runtime.json
+C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Abdul\source\repos\EasyLearnAPI\EasyLearnAPI\EasyLearn\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

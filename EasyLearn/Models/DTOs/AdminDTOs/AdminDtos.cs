@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using EasyLearn.Models.DTOs.PaymentDetailDTOs;
+﻿using EasyLearn.Models.DTOs.PaymentDetailDTOs;
 using EasyLearn.Models.Enums;
 
 namespace EasyLearn.Models.DTOs.AdminDTOs;
@@ -39,16 +37,16 @@ public class AdminDto
 
 
 
-public class AdminResponseModel : BaseResponse
-{
-    public AdminDto Data { get; set; }
-}
+//public class AdminResponseModel : BaseResponse
+//{
+//    public AdminDto Data { get; set; }
+//}
 
-public class AdminsResponseModel : BaseResponse
-{
-    public IEnumerable<AdminDto> Data { get; set; }
-    //public AdminDtos Data { get; set; }
-}
+//public class AdminsResponseModel : BaseResponse
+//{
+//    public IEnumerable<AdminDto> Data { get; set; }
+//    //public AdminDtos Data { get; set; }
+//}
 
 
 

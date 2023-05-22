@@ -30,7 +30,7 @@ public class CSVFileManagerDTO
 }
 
 
-public class CSVFileResponseModel : BaseResponse
+public class CSVFileResponseModel
 {
     public string FileName { get; set; }
     public ICollection<CSVFileManagerDTO> Data { get; set; }

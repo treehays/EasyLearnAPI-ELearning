@@ -1,13 +1,12 @@
-﻿namespace EasyLearn.Models.Enums
+﻿namespace EasyLearn.Models.Enums;
+
+public enum CourseLanguage
 {
-    public enum CourseLanguage
-    {
-        English = 1,
-        French,
-        Japanese,
-        Spanish,
-        German,
-        Italian,
-        Russian,
-    }
+    English = 1,
+    French,
+    Japanese,
+    Spanish,
+    German,
+    Italian,
+    Russian,
 }

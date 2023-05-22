@@ -104,12 +104,12 @@ public class UpdateInstructorActiveStatusRequestModel
     public bool IsActive { get; set; }
 }
 
-public class InstructorResponseModel : BaseResponse
-{
-    public InstructorDto Data { get; set; }
-}
+//public class InstructorResponseModel : BaseResponse
+//{
+//    public InstructorDto Data { get; set; }
+//}
 
-public class InstructorsResponseModel : BaseResponse
-{
-    public IEnumerable<InstructorDto> Data { get; set; }
-}
+//public class InstructorsResponseModel : BaseResponse
+//{
+//    public IEnumerable<InstructorDto> Data { get; set; }
+//}

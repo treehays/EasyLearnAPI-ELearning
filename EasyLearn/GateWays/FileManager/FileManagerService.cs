@@ -1,7 +1,9 @@
 ﻿
 //using Microsoft.WindowsAPICodePack.Shell;
 using CsvHelper;
+using EasyLearn.Models.DTOs;
 using EasyLearn.Models.DTOs.FIleManagerDTOs;
+using Mapster;
 using Microsoft.WindowsAPICodePack.Shell;
 using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
 using System.Globalization;
@@ -116,13 +118,13 @@ public class FileManagerService : IFileManagerService
     }
 
 
-    public CSVFileResponseModel ReadModuleUploader(string fileName)
+    public BaseResponse<CSVFileResponseModel> ReadModuleUploader(string fileName)
     {
         var fileFolderh = Path.Combine(_webHostEnvironment.WebRootPath, "CsvFolder", "Uploads");
         var fullPath = Path.Combine(fileFolderh, fileName);
         if (!File.Exists(fullPath))
         {
-            return new CSVFileResponseModel
+            return new BaseResponse<CSVFileResponseModel>
             {
                 Success = false,
                 Message = "File not found..",
@@ -135,11 +137,11 @@ public class FileManagerService : IFileManagerService
             var records = csv.GetRecords<CSVFileManagerDTO>();
             readFromCsv = records.ToList();
         }
-        return new CSVFileResponseModel
+        return new BaseResponse<CSVFileResponseModel>
         {
             Success = true,
             Message = "Generating successfully..",
-            Data = readFromCsv,
+            Data = readFromCsv.Adapt<CSVFileResponseModel>(),
         };
     }
 

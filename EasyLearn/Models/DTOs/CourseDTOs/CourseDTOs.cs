@@ -61,24 +61,24 @@ namespace EasyLearn.Models.DTOs.CourseDTOs
 
     }
 
-    public class CourseResponseModel : BaseResponse
-    {
-        public CourseDTO Data { get; set; }
-    }
+    //public class CourseResponseModel : BaseResponse
+    //{
+    //    public CourseDTO Data { get; set; }
+    //}
 
 
-    public class CoursesResponseModel : BaseResponse
-    {
-        public int NumberOfCourse { get; set; }
-        public IEnumerable<CourseDTO> Data { get; set; }
-    }
+    //public class CoursesResponseModel : BaseResponse
+    //{
+    //    public int NumberOfCourse { get; set; }
+    //    public IEnumerable<CourseDTO> Data { get; set; }
+    //}
 
-    public class CoursesEnrolledRequestModel : BaseResponse
-    {
-        public IEnumerable<CourseDTO> Data { get; set; }
+    //public class CoursesEnrolledRequestModel : BaseResponse
+    //{
+    //    public IEnumerable<CourseDTO> Data { get; set; }
 
 
-    }
+    //}
 
 
     public class UpdateCourseActiveStatusRequestModel

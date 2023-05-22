@@ -18,7 +18,7 @@ public class CreateWalletequestModel
     public string Description { get; set; }
 }
 
-public class WalletResponseModel : BaseResponse
-{
-    public IEnumerable<WalletDTO> Data { get; set; }
-}
+//public class WalletResponseModel : BaseResponse
+//{
+//    public IEnumerable<WalletDTO> Data { get; set; }
+//}

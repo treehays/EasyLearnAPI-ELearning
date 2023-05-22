@@ -103,12 +103,12 @@ public class UpdateModeratorActiveStatusRequestModel
     public bool IsActive { get; set; }
 }
 
-public class ModeratorResponseModel : BaseResponse
-{
-    public ModeratorDto Data { get; set; }
-}
+//public class ModeratorResponseModel : BaseResponse
+//{
+//    public ModeratorDto Data { get; set; }
+//}
 
-public class ModeratorsResponseModel : BaseResponse
-{
-    public IEnumerable<ModeratorDto> Data { get; set; }
-}
+//public class ModeratorsResponseModel : BaseResponse
+//{
+//    public IEnumerable<ModeratorDto> Data { get; set; }
+//}

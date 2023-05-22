@@ -46,6 +46,7 @@ public class EasyLearnDbSeedingData
             CreatedOn = DateTime.Now,
             Gender = Gender.Male,
             Admin = admin,
+            ProfilePicture = "Default.jpg",
           }
         };
 

@@ -1,10 +1,9 @@
-﻿namespace EasyLearn.Models.Enums
+﻿namespace EasyLearn.Models.Enums;
+
+public enum DifficultyLevel
 {
-    public enum DifficultyLevel
-    {
-        Begginer = 1,
-        Intermediate,
-        Professional,
-        AllLevel
-    }
+    Begginer = 1,
+    Intermediate,
+    Professional,
+    AllLevel
 }

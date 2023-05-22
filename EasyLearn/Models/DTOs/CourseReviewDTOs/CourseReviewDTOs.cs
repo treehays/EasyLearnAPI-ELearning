@@ -37,15 +37,15 @@
     }
 
 
-    public class CourseReviewsResponseModel : BaseResponse
-    {
-        public IEnumerable<CourseReviewDTO> Data { get; set; }
-    }
+    //public class CourseReviewsResponseModel : BaseResponse
+    //{
+    //    public IEnumerable<CourseReviewDTO> Data { get; set; }
+    //}
 
 
-    public class CourseReviewResponseModel : BaseResponse
-    {
-        public CourseReviewDTO Data { get; set; }
-    }
+    //public class CourseReviewResponseModel : BaseResponse
+    //{
+    //    public CourseReviewDTO Data { get; set; }
+    //}
 
 }

@@ -45,13 +45,13 @@ public class UpdateModuleRequestModel
 }
 
 
-public class ModuleResponseModel : BaseResponse
-{
-    public ModuleDTO Data { get; set; }
-}
+//public class ModuleResponseModel : BaseResponse
+//{
+//    public ModuleDTO Data { get; set; }
+//}
 
 
-public class ModulesResponseModel : BaseResponse
+public class ModulesResponseModel
 {
     public int PageCount { get; set; }
     public int CurrentPageIndex { get; set; }

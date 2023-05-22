@@ -1,11 +1,10 @@
 using EasyLearn.Data;
-using EasyLearn.GateWays.Email;
-using EasyLearn.GateWays.FileManager;
-using EasyLearn.Repositories.Implementations;
-using EasyLearn.Repositories.Interfaces;
 using EasyLearn.Services.Implementations;
-using EasyLearn.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Text;
 
 namespace EasyLearn;
 
@@ -16,12 +15,13 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-        var configuration = builder.Configuration.GetConnectionString("EasyLearnDbConnectionString");
+        var connectionstring = builder.Configuration.GetConnectionString("EasyLearnDbConnectionString2");
+        builder.Services.AddDatabase(connectionstring);
 
-        builder.Services.AddDbContext<EasyLearnDbContext>(options => options.UseMySql(configuration, ServerVersion.AutoDetect(configuration)));
+
         builder.Services
-       .AddOptions<CompanyInfoOption>()
-       .BindConfiguration("CompanyInfo");
+            .AddOptions<CompanyInfoOption>()
+            .BindConfiguration("CompanyInfo");
 
         builder.Services
             .AddOptions<PaystackOptions>()
@@ -31,24 +31,69 @@ public class Program
             .AddOptions<SendinblueOptions>()
             .BindConfiguration("SendinblueAPIKey");
 
-        builder.Services.AddScoped<IUserRepository, UserRepository>();
-        builder.Services.AddScoped<IUserService, UserService>();
+        builder.Services.AddRepositories();
 
-        //builder.Services.AddScoped<IAdminRepository, AdminRepository>();
-        //builder.Services.AddScoped<IAdminService, AdminService>();
-
-        builder.Services.AddScoped<IFileManagerService, FileManagerService>();
-        builder.Services.AddScoped<ISendInBlueEmailService, SendInBlueEmailService>();
-        builder.Services.AddScoped<CompanyInfoOption>();
-        builder.Services.AddScoped<SendinblueOptions>();
-        builder.Services.AddScoped<PaystackOptions>();
-
-
-
+        builder.Services.AddHttpContextAccessor();
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+        builder.Services.AddSwaggerGen(option =>
+            {
+                option.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "EasyLearn API",
+                    Version = "v1",
+                    Contact = new OpenApiContact
+                    {
+                        Email = "Treehays90@gmail.com",
+                        Name = "S3m1c0l0n",
+                    },
+                    Description = "This is just an educational Application",
+                });
+
+                option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Description = "Please enter a valid token",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    BearerFormat = "JWT",
+                    Scheme = "Bearer"
+                });
+                option.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type=ReferenceType.SecurityScheme,
+                                Id="Bearer"
+                            }
+                        },
+                        new string[]{}
+                    }
+                });
+            });
+
+        builder.Services
+            .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ClockSkew = TimeSpan.Zero,
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = "EasyLearnAuthIssuer",
+                    ValidAudience = "EasyLearnAuthAudience",
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes("!SomethingSecret!")
+            ),
+                };
+            });
 
         var app = builder.Build();
 
@@ -61,8 +106,11 @@ public class Program
 
         app.UseHttpsRedirection();
 
+        app.UseAuthentication();
         app.UseAuthorization();
 
+
+        app.UseCors(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
         app.MapControllers();
         EasyLearnDbInitializer.Seed(app);

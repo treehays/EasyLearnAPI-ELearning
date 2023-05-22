@@ -31,18 +31,18 @@
         public string Name { get; set; }
     }
 
-    public class CategoriesResponseModel : BaseResponse
-    {
+    //public class CategoriesResponseModel : BaseResponse
+    //{
 
-        public IEnumerable<CategoryDTO> Data { get; set; }
-    }
+    //    public IEnumerable<CategoryDTO> Data { get; set; }
+    //}
 
 
-    public class CategoryResponseModel : BaseResponse
-    {
+    //public class CategoryResponseModel : BaseResponse
+    //{
 
-        public CategoryDTO Data { get; set; }
-    }
+    //    public CategoryDTO Data { get; set; }
+    //}
 
 
 }

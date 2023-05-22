@@ -1,6 +1,6 @@
 ﻿namespace EasyLearn.Models.Enums;
 
-public enum boolOption
+public enum BoolOption
 {
     False,
     True

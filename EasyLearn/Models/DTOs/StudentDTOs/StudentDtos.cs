@@ -101,12 +101,12 @@ public class UpdateStudentActiveStatusRequestModel
     public bool IsActive { get; set; }
 }
 
-public class StudentResponseModel : BaseResponse
-{
-    public StudentDto Data { get; set; }
-}
+//public class StudentResponseModel : BaseResponse
+//{
+//    public StudentDto Data { get; set; }
+//}
 
-public class StudentsResponseModel : BaseResponse
-{
-    public IEnumerable<StudentDto> Data { get; set; }
-}
+//public class StudentsResponseModel : BaseResponse
+//{
+//    public IEnumerable<StudentDto> Data { get; set; }
+//}
