@@ -15,14 +15,14 @@ public class User : AuditableEntity
     public string? Skill { get; set; }
     public string? Interest { get; set; }
     public string? PhoneNumber { get; set; }
-    public Gender Gender { get; set; }
-    public StudentshipStatus StudentshipStatus { get; set; }
-    public string RoleId { get; set; }
     public bool IsActive { get; set; } = true;
     public bool EmailConfirmed { get; set; }
     public string? EmailToken { get; set; }
     public bool PhoneNumberConfirmed { get; set; }
 
+    public string RoleId { get; set; }
+    public Gender Gender { get; set; }
+    public StudentshipStatus StudentshipStatus { get; set; }
     public Role Role { get; set; }
     public Student Student { get; set; }
     public Moderator Moderator { get; set; }

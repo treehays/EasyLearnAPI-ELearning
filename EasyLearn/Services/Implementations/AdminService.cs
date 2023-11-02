@@ -1,16 +1,17 @@
-﻿using EasyLearn.Services.Interfaces;
+﻿using EasyLearn.Repositories.Interfaces;
+using EasyLearn.Services.Interfaces;
 
 namespace EasyLearn.Services.Implementations;
 
 public class AdminService : IAdminService
 {
-    //private readonly IUserRepository _userRepository;
-    //private readonly IUserService _userService;
+    private readonly IUserRepository _userRepository;
+    private readonly IUserService _userService;
 
-    //public AdminService(IUserRepository userRepository, IUserService userService)
+    public AdminService(IUserRepository userRepository, IUserService userService) => (_userRepository, _userService) = (userRepository, userService);
     //{
     //    _userRepository = userRepository;
-    //    _userService = userService;
+    //    userRepositoryuserRepository = userService;
     //}
 
     //public async Task<BaseResponse> AdminRegistration(CreateUserRequestModel model, string baseUrl, string userId)

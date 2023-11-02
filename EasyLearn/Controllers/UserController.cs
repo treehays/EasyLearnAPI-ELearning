@@ -1,7 +1,6 @@
 ﻿using EasyLearn.Authentication;
 using EasyLearn.Models.DTOs.UserDTOs;
 using EasyLearn.Services.Interfaces;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -112,18 +111,22 @@ public class UserController : ControllerBase
 
 
     //tested
-    [HttpGet(Name = "GetAll"), Authorize]
     //[HttpGet(Name = "GetAll"), Authorize(Roles = "Admin")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
+    //[HttpGet(Name = "GetAll"), Authorize(Roles = "admin")]
+    [HttpGet(Name = "GetAll")]
     public async Task<IActionResult> GetAll()
     {
         // Retrieve the authorization token from the request headers
         string authorizationHeader = Request.Headers["Authorization"];
 
         // Extract the token value from the authorization header (e.g., removing "Bearer ")
-        string token = authorizationHeader.Replace("Bearer ", "");
+        string token = authorizationHeader?.Replace("Bearer ", "");
 
+        var rrll = User?.Identity?.Name;
+        var role = User.FindFirstValue(ClaimTypes.Role);
+        var dsd = User.FindFirstValue(ClaimTypes.GivenName);
         var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
         var response = await _userService.GetAllUser();
         if (!response.Success) return NotFound(response);

@@ -35,6 +35,15 @@ public class Program
 
         builder.Services.AddHttpContextAccessor();
         builder.Services.AddControllers();
+        //addung custome origi nCORS
+        //builder.Services.AddCors(options =>
+        //{
+        //    options.AddPolicy("AllowOrigin",
+        //        builder => builder.WithOrigins("http://127.0.0.1:5500")
+        //            .AllowAnyHeader()
+        //            .AllowAnyMethod());
+        //});
+
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(option =>
@@ -110,7 +119,13 @@ public class Program
         app.UseAuthorization();
 
 
-        app.UseCors(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+        // Configure middleware
+        //app.UseCors("AllowOrigin");//to specify the origin
+
+        app.UseCors(policy => policy
+        .AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod());
 
         app.MapControllers();
         EasyLearnDbInitializer.Seed(app);

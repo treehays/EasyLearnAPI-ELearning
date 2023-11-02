@@ -16,8 +16,8 @@ namespace EasyLearn.Services.Implementations;
 public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
-    private readonly ITokenService _tokenService;
     private readonly ISendInBlueEmailService _emailService;
+    private readonly ITokenService _tokenService;
     private readonly IFileManagerService _fileManagerService;
     public UserService(IUserRepository userRepository, ISendInBlueEmailService emailService, IFileManagerService fileManagerService, ITokenService tokenService)
     {
@@ -146,7 +146,7 @@ public class UserService : IUserService
                     UserId = user.Id,
                     CreatedBy = userId,
                     CreatedOn = DateTime.Now,
-                    ModifiedOn = DateTime.Now,
+                    //ModifiedOn = DateTime.Now,
                     ModifiedBy = userId,
                 };
                 user.RoleId = "Moderator";
@@ -167,7 +167,7 @@ public class UserService : IUserService
                     UserId = user.Id,
                     CreatedBy = userId,
                     CreatedOn = DateTime.Now,
-                    ModifiedOn = DateTime.Now,
+                    //ModifiedOn = DateTime.Now,
                     ModifiedBy = userId,
                     VerifyBy = userId,
                     VerifyOn = DateTime.Now,
@@ -196,7 +196,7 @@ public class UserService : IUserService
                 UserId = user.Id,
                 CreatedBy = userId,
                 CreatedOn = DateTime.Now,
-                ModifiedOn = DateTime.Now,
+                //ModifiedOn = DateTime.Now,
                 ModifiedBy = userId,
             };
             user.RoleId = "Moderator";
@@ -234,6 +234,7 @@ public class UserService : IUserService
             };
         }
         var user = model.Adapt<User>();
+        user.CreatedOn = DateTime.Now;
         //if (model.FormFile != null)
         //{
         //    user.ProfilePicture = await _fileManagerService.GetFileName(model.FormFile, "uploads", "images", "profilePictures");

@@ -68,7 +68,7 @@ public class PayStackService : IPayStackService
         {
             var response = await client.PostAsync(endPoint, content);
             var resString = await response.Content.ReadAsStringAsync();
-            var responseObj = JsonSerializer.Deserialize<InitializePaymentResponseModel>(resString);
+            var responseObj = JsonSerializer.Deserialize<InitializePaymentResponseModel>(resString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 return responseObj;
