@@ -1,10 +1,10 @@
+using System.Text;
 using EasyLearn.Data;
 using EasyLearn.Services.Implementations;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Text;
 
 namespace EasyLearn;
 
@@ -58,6 +58,7 @@ public class Program
                         Name = "S3m1c0l0n",
                     },
                     Description = "This is just an educational Application",
+
                 });
 
                 option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -110,7 +111,10 @@ public class Program
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
-            app.UseSwaggerUI();
+            app.UseSwaggerUI(c =>
+            {
+                c.EnableTryItOutByDefault();
+            });
         }
 
         app.UseHttpsRedirection();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abdul\\source\\repos\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\EasyLearn.csproj": {}
+    "C:\\Users\\Abdul\\source\\repos\\Personal\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\EasyLearn.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abdul\\source\\repos\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\EasyLearn.csproj": {
+    "C:\\Users\\Abdul\\source\\repos\\Personal\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\EasyLearn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abdul\\source\\repos\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\EasyLearn.csproj",
+        "projectUniqueName": "C:\\Users\\Abdul\\source\\repos\\Personal\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\EasyLearn.csproj",
         "projectName": "EasyLearn",
-        "projectPath": "C:\\Users\\Abdul\\source\\repos\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\EasyLearn.csproj",
+        "projectPath": "C:\\Users\\Abdul\\source\\repos\\Personal\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\EasyLearn.csproj",
         "packagesPath": "C:\\Users\\Abdul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abdul\\source\\repos\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\obj\\",
+        "outputPath": "C:\\Users\\Abdul\\source\\repos\\Personal\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -71,6 +71,10 @@
               "target": "Package",
               "version": "[7.0.2, )"
             },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.19.5, )"
+            },
             "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.2, )"
@@ -115,7 +119,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
