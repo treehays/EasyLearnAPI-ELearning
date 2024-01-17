@@ -562,3 +562,6 @@ $RECYCLE.BIN/
 # Ignore unverified snapshot testing results
 **/*.received.txt
 /Material
+/.vs
+/EasyLearn/bin
+/EasyLearn/obj
