@@ -563,5 +563,12 @@ $RECYCLE.BIN/
 **/*.received.txt
 /Material
 /.vs
-/EasyLearn/bin
-/EasyLearn/obj
+EasyLearn/bin/*
+EasyLearn/obj/*
+EasyLearn/.vs/*
+EasyLearn/obj/Debug/net7.0/staticwebassets.build.json
+EasyLearn/.vs/EasyLearn/DesignTimeBuild/.dtbcache.v2
+EasyLearn/obj/Debug/net7.0/refint/EasyLearn.dll
+EasyLearn/obj/Debug/net7.0/staticwebassets.build.json
+EasyLearn/obj/Debug/net7.0/ref/EasyLearn.dll
+EasyLearn/bin/Debug/net7.0/EasyLearn.pdb
