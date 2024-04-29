@@ -14,8 +14,4 @@ public class PasswordValidation : ValidationAttribute
         return true;
     }
 
-    public override string FormatErrorMessage(string name)
-    {
-        return $"The {name} field must be at least 8 characters long and contains uppercase letter, lowercase letter, number and symbol.";
-    }
 }

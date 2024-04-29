@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abdul\\source\\repos\\Personal\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\EasyLearn.csproj": {}
+    "C:\\Users\\abdul\\Documents\\Temp\\EasyLearnAPI-ELearning\\EasyLearn\\EasyLearn.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abdul\\source\\repos\\Personal\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\EasyLearn.csproj": {
+    "C:\\Users\\abdul\\Documents\\Temp\\EasyLearnAPI-ELearning\\EasyLearn\\EasyLearn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abdul\\source\\repos\\Personal\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\EasyLearn.csproj",
+        "projectUniqueName": "C:\\Users\\abdul\\Documents\\Temp\\EasyLearnAPI-ELearning\\EasyLearn\\EasyLearn.csproj",
         "projectName": "EasyLearn",
-        "projectPath": "C:\\Users\\Abdul\\source\\repos\\Personal\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\EasyLearn.csproj",
-        "packagesPath": "C:\\Users\\Abdul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abdul\\source\\repos\\Personal\\EasyLearnAPI\\EasyLearnAPI\\EasyLearn\\obj\\",
+        "projectPath": "C:\\Users\\abdul\\Documents\\Temp\\EasyLearnAPI-ELearning\\EasyLearn\\EasyLearn.csproj",
+        "packagesPath": "C:\\Users\\abdul\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\abdul\\Documents\\Temp\\EasyLearnAPI-ELearning\\EasyLearn\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Abdul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\abdul\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -62,6 +67,10 @@
               "version": "[6.0.11, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.2, )"
             },
@@ -119,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

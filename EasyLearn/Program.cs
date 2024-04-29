@@ -15,7 +15,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-        var connectionstring = builder.Configuration.GetConnectionString("EasyLearnDbConnectionString2");
+        var connectionstring = builder.Configuration.GetConnectionString("DbConnectionString1");
         builder.Services.AddDatabase(connectionstring);
 
 

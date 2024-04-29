@@ -42,15 +42,14 @@ public class EasyLearnDbInitializer
         };
 
 
-        using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
+        using var serviceScope = applicationBuilder.ApplicationServices.CreateScope();
+        var context = serviceScope.ServiceProvider.GetService<EasyLearnDbContext>();
+
+        await context.Database.MigrateAsync();
+
+        if (!context.Roles.Any())
         {
-            var context = serviceScope.ServiceProvider.GetService<EasyLearnDbContext>();
-
-            await context.Database.MigrateAsync();
-
-            if (!context.Roles.Any())
-            {
-                var listOfRoles = new List<Role>
+            var listOfRoles = new List<Role>
                 {
                       new Role()
                     {
@@ -89,9 +88,8 @@ public class EasyLearnDbInitializer
                         Id= "Student",
                     }
                 };
-                context.Roles.AddRange(listOfRoles);
-                context.SaveChanges();
-            }
+            context.Roles.AddRange(listOfRoles);
+            context.SaveChanges();
         }
     }
 
