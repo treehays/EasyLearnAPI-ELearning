@@ -25,5 +25,6 @@ public static class ServiceCollectionExtension
             .AddScoped<CompanyInfoOption>()
             .AddScoped<SendinblueOptions>()
             .AddScoped<PaystackOptions>();
+        //is their oter way
     }
 }
